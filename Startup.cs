@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
-
+using Microsoft.Extensions.Configuration;
 
 namespace webapp
 {
@@ -10,16 +10,23 @@ namespace webapp
     {
         public Startup(IHostingEnvironment env)
         {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddEnvironmentVariables();
 
+            Configuration = builder.Build();
         }
 
-        public void ConfigureServices(IServiceCollection services) {
+        public IConfiguration Configuration { get; set; }
+
+        public void ConfigureServices(IServiceCollection services) {            
             services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-        {
-           app.UseMvc(routes =>
+        {            
+            app.UseDeveloperExceptionPage();
+            app.UseMvc(routes =>
            {
                routes.MapRoute("default",
                    template: "{controller=Home}/{action=Index}/{id?}");

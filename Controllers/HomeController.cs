@@ -1,12 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using webapp.Models;
 
 namespace webapp.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public async Task<IActionResult> Index()
         {
-            return "Hello World";
+            var model = new StockQuote { Symbol = "HLLO", Price = 3200 };
+
+            return View(model);            
         }
     }
 }
