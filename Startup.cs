@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 
 namespace webapp
@@ -13,11 +13,16 @@ namespace webapp
 
         }
 
+        public void ConfigureServices(IServiceCollection services) {
+            services.AddMvc();
+        }
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            app.Run(async (context) =>
+           app.UseMvc(routes =>
            {
-               await context.Response.WriteAsync("Hello, world!");
+               routes.MapRoute("default",
+                   template: "{controller=Home}/{action=Index}/{id?}");
            });
         }
     }
