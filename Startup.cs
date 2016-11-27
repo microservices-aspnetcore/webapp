@@ -25,16 +25,13 @@ namespace webapp
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {            
-            app.UseDeveloperExceptionPage();
-            app.UseMvc(routes =>
+           app.UseDeveloperExceptionPage();
+           app.UseMvc(routes =>
            {
                routes.MapRoute("default",
                    template: "{controller=Home}/{action=Index}/{id?}");
            });
-           app.UseStaticFiles(new StaticFileOptions()
-           {
-                 FileProvider = env.ContentRootFileProvider                  
-            });
+           app.UseStaticFiles();
         }
     }
 }
