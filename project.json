@@ -6,7 +6,8 @@
     "preserveCompilationContext": true,
     "copyToOutput": {
       "include": [
-        "Views"        
+        "Views",
+        "wwwroot"        
       ]
     }
   },
@@ -14,6 +15,7 @@
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Hosting": "1.0.0",
     "Microsoft.AspNetCore.Mvc": "1.0.1",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0",
     "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
     "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
     "Microsoft.Extensions.Configuration.CommandLine": "1.1.0",
