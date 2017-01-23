@@ -24,7 +24,10 @@ namespace webapp
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-        {            
+        {     
+           loggerFactory.AddConsole();
+           loggerFactory.AddDebug();       
+           
            app.UseDeveloperExceptionPage();
            app.UseMvc(routes =>
            {
