@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 
-namespace webapp
+namespace StatlerWaldorfCorp.WebApp
 {
     public class Startup
     {

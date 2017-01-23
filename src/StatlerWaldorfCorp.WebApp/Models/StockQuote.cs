@@ -1,5 +1,5 @@
 ﻿
-namespace webapp.Models
+namespace StatlerWaldorfCorp.WebApp.Models
 {
     public class StockQuote
     {

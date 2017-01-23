@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using webapp.Models;
+using StatlerWaldorfCorp.WebApp.Models;
 
-namespace webapp.Controllers
+namespace StatlerWaldorfCorp.WebApp.Controllers
 {
     [Route("api/test")]
     public class ApiController : Controller

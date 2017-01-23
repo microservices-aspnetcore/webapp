@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
-namespace webapp
+namespace StatlerWaldorfCorp.WebApp
 {
     public class Program
     {

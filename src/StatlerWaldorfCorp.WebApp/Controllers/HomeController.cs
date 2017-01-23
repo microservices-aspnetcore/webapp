@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using webapp.Models;
+using StatlerWaldorfCorp.WebApp.Models;
 
-namespace webapp.Controllers
+namespace StatlerWaldorfCorp.WebApp.Controllers
 {
     public class HomeController : Controller
     {
